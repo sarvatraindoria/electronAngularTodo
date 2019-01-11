@@ -1,0 +1,34 @@
+<div>
+    <br>
+    <mat-card>Enter task name below . . . </mat-card>
+    <br>
+    <br>
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" [(ngModel)]="taskOne">
+    </mat-form-field>
+    <br>
+    <br>
+    <button (click)="addToList()" mat-raised-button>Add Task</button>
+
+    <br>
+    <br>
+    <mat-card>Todo List</mat-card>
+
+    <br>
+
+    <div>
+        <mat-nav-list>
+            <a mat-list-item *ngFor="let task of tasks">
+                <div> {{ task }} </div>
+                <br>
+                <div>
+                    <button mat-raised-button> delete
+                        <mat-icon (click)="deleteSite(task)">delete</mat-icon>
+                    </button>
+
+                </div>
+            </a>
+        </mat-nav-list>
+
+    </div>
+</div>
